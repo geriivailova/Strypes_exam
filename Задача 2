@@ -1,0 +1,27 @@
+#include <stdio.h>
+    int Sum(int n){
+    int sum = 0;
+    while (n != 0) {
+        sum = sum + n % 10;
+        n = n / 10;
+    }
+    return sum;
+}
+
+ 
+// Driver code
+int main()
+{   int newSum = 0;
+    int f;
+    int n;
+    printf("Enter a size of the array:");
+    scanf("%d", &f);
+    printf("Enter %d elements for the array\n", f );
+    for(int i = 0; i < f; i++){
+    scanf("%d",&n);
+    newSum += Sum(n);
+    }
+    printf("The sum of all digits is %d ", newSum);
+    return 0;
+}
+
