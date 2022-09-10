@@ -3,18 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-void Count()
-{   int upper = 0, lower = 0, number = 0, special = 0;
-    for (int i = 0; i < str.length(); i++)
-    {
-        if (str[i] >= 'A' && str[i] <= 'Z')
-            upper++;
-        else if (str[i] >= 'a' && str[i] <= 'z')
-            lower++;
-            
-    printf("%d/n", upper);
-    }
-}
+
 
 int main() {
     
@@ -25,23 +14,28 @@ int main() {
     scanf("%d", &m);
     scanf("%d", &k);
     int sum = n + m + k;
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
     char string[n];
     char string1[m];
     char string2[k];
+    
 
     printf("%d\n", sum);
     //printf("Created an array of size %lu\n", sizeof(elements));
-    for (int i=0;i< n;i++)
+    for (int i=0;i< n;i++){
         string[i]=rand()%26+97;
-    for (int l=0;l<m;l++)
+        count1 += 1;}
+    for (int l=0;l<m;l++){
         string1[l]=rand()%26+65;
-    //for (int o=0;o<k;o++)
-        //string2[o]=rand();
+        count2 += 1;}
+    for (int o=0;o<k;o++){
+        string2[o]= rand()%22 + 33 ;
+        count3 += 1;}
         
-    printf("%s%s%s ",string,string1,string2);
-    Count(string);
-    
-    
+    printf("%s%s%s\n ",string,string1,string2);
+    printf("Number of lowercase letters is %d\n Number of Uppercase letters is %d\n Number of special symbols is %d\n ",count1,count2,count3);
 
 
     return 0;
